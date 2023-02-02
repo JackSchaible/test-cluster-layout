@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aafa4184be355d468677850dc361ca0, type: 3}
+  m_Name: Mechanics 2
+  m_EditorClassIdentifier: 
+  Name: Mechanics B
+  Cluster: {fileID: 11400000, guid: fc513be6da1be0c46b7f8eb5e019bc52, type: 2}
+  Parents:
+  - {fileID: 11400000, guid: 223a6953be3072443bcde5f8a135bd35, type: 2}
+  Children: []
+  Radius: 0
