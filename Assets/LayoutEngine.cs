@@ -13,24 +13,21 @@ public class LayoutEngine : MonoBehaviour
     
 
     // Start is called before the first frame update
-    private void Awake()
+    public void Generate()
     {
-        foreach (Transform child in Canvas.transform)
-            DestroyImmediate(child.gameObject);
-        
         Layout(Root, Vector2.zero, Spacing);
     }
 
-    public void Layout(ResearchNode node, Vector2 center, float radius, Node parentNode = null)
+    private void Layout(ResearchNode node, Vector2 center, float radius, Node parentNode = null)
     {
         GameObject treeNodeObject = Instantiate(TreeNodePrefab, Canvas.transform);
+        treeNodeObject.name = node.Name;
         Node treeNode = treeNodeObject.GetComponent<Node>();
         treeNode.Position = center;
         treeNode.Cluster = node.Cluster;
-        treeNode.Radius = node.Radius;
-        treeNode.Parents = node.Parents;
         treeNode.Children = node.Children;
         treeNode.Name = node.Name;
+        treeNode.Radius = Spacing;
 
         RectTransform rectTransform = treeNodeObject.GetComponent<RectTransform>();
         rectTransform.anchoredPosition = center;
@@ -45,11 +42,12 @@ public class LayoutEngine : MonoBehaviour
         if (parentNode != null)
         {
             childAngle = Mathf.Atan2(center.y - parentNode.Position.y, center.x - parentNode.Position.x);
+            RectTransform parentTransform = parentNode.GetComponent<RectTransform>();
             DrawLine(
-                treeNode.Position + new Vector2(treeNode.Radius * Mathf.Cos(childAngle),
+                rectTransform.anchoredPosition + new Vector2(treeNode.Radius * Mathf.Cos(childAngle),
                     treeNode.Radius * Mathf.Sin(childAngle)),
-                parentNode.Position + new Vector2(parentNode.Radius * Mathf.Cos(childAngle),
-                    parentNode.Radius * Mathf.Sin(childAngle)), Canvas);
+                parentTransform.anchoredPosition + new Vector2(parentNode.Radius * Mathf.Cos(childAngle),
+                    parentNode.Radius * Mathf.Sin(childAngle)), Canvas, treeNode.Name, parentNode.Name);
         }
 
         for (int i = 0; i < n; i++)
@@ -59,23 +57,22 @@ public class LayoutEngine : MonoBehaviour
             if (child.Cluster != node.Cluster)
             {
                 adjustedRadius *= ClusterScale;
+                // TODO: Make the children spawn away from the parent node in a 90 degree arc
             }
 
             float angle = i * angleStep + childAngle;
             float childX = center.x + adjustedRadius * Mathf.Cos(angle);
             float childY = center.y + adjustedRadius * Mathf.Sin(angle);
             Vector2 childCenter = new (childX, childY);
-            
-            if (child.Children.Length == 0)
-                DrawLine(childCenter, treeNode.Position, Canvas);
-            
+
             Layout(child, childCenter, adjustedRadius / 2, treeNode);
         }
     }
 
-    private static void DrawLine(Vector2 start, Vector2 end, Component canvas)
+    // TODO: This doesn't work at all
+    private static void DrawLine(Vector2 start, Vector2 end, Component canvas, string fromObjectName, string toObjectName)
     {
-        GameObject lineObject = new ("Line");
+        GameObject lineObject = new($"Line from {fromObjectName} to {toObjectName}");
         lineObject.transform.SetParent(canvas.transform);
         Image image = lineObject.AddComponent<Image>();
         image.color = Color.white;

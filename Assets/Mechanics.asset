@@ -9,15 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aafa4184be355d468677850dc361ca0, type: 3}
+  m_Script: {fileID: 11500000, guid: 984080747f015444aa1dd1ef0270f552, type: 3}
   m_Name: Mechanics
   m_EditorClassIdentifier: 
   Name: Mechanics
   Cluster: {fileID: 11400000}
-  Parents:
-  - {fileID: 11400000, guid: 223a6953be3072443bcde5f8a135bd35, type: 2}
   Children:
-  - {fileID: 11400000, guid: 6144f406be7ab784985dd11da5aab096, type: 2}
-  - {fileID: 11400000, guid: d4c74d4383ed2014382fa9895c95dfca, type: 2}
-  - {fileID: 11400000, guid: b44802732c5b7584d88dd4db6c38ced0, type: 2}
-  Radius: 0
+  - {fileID: 11400000, guid: 0e68eedf7fde8bb46a12e6e9909fb1fc, type: 2}
+  - {fileID: 11400000, guid: 4b3375986d3cca54683b30b8030fbedd, type: 2}
+  - {fileID: 11400000, guid: bd5306905774a174ab48ac27fa3c5cbb, type: 2}

@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aafa4184be355d468677850dc361ca0, type: 3}
+  m_Script: {fileID: 11500000, guid: 984080747f015444aa1dd1ef0270f552, type: 3}
   m_Name: Phys Research A
   m_EditorClassIdentifier: 
-  Name: Research A
-  Cluster: {fileID: 11400000, guid: 223a6953be3072443bcde5f8a135bd35, type: 2}
-  Parents: []
+  Name: Phys Research A
+  Cluster: {fileID: 11400000, guid: 08f7d8781d802f44a89009b6b8097a84, type: 2}
   Children: []
-  Radius: 0

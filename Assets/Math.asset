@@ -9,14 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aafa4184be355d468677850dc361ca0, type: 3}
+  m_Script: {fileID: 11500000, guid: 984080747f015444aa1dd1ef0270f552, type: 3}
   m_Name: Math
   m_EditorClassIdentifier: 
   Name: Math
   Cluster: {fileID: 11400000}
-  Parents: []
   Children:
-  - {fileID: 11400000, guid: f2165a5b9b992d14294b662911cfb677, type: 2}
-  - {fileID: 11400000, guid: 223a6953be3072443bcde5f8a135bd35, type: 2}
-  - {fileID: 11400000, guid: 5adb9ba3f6913344789d81823f1989a0, type: 2}
-  Radius: 2
+  - {fileID: 11400000, guid: 08f7d8781d802f44a89009b6b8097a84, type: 2}
+  - {fileID: 11400000, guid: 72f501f6c82c1dd4eb5eae2dd245e160, type: 2}
+  - {fileID: 11400000, guid: 28efd4cf4d7a2c44b897bb2a0311e43a, type: 2}
