@@ -37,19 +37,27 @@ public class LayoutEngine : MonoBehaviour
         int n = children.Length;
         if (n == 0) return;
 
-        float angleStep = 2 * Pi / n;
+        // Updated this to restrict the angle children spawn in to 90 degrees
+        float angleStep = Pi / (2 * n);
         float childAngle = 0;
+
         if (parentNode != null)
         {
             childAngle = Mathf.Atan2(center.y - parentNode.Position.y, center.x - parentNode.Position.x);
             RectTransform parentTransform = parentNode.GetComponent<RectTransform>();
-            DrawLine(
-                rectTransform.anchoredPosition + new Vector2(treeNode.Radius * Mathf.Cos(childAngle),
-                    treeNode.Radius * Mathf.Sin(childAngle)),
-                parentTransform.anchoredPosition + new Vector2(parentNode.Radius * Mathf.Cos(childAngle),
-                    parentNode.Radius * Mathf.Sin(childAngle)), Canvas, treeNode.Name, parentNode.Name);
+
+            // Moved these to their own lines to make it easier to read
+            Vector2 lineStart = rectTransform.anchoredPosition + new Vector2(treeNode.Radius * Mathf.Cos(childAngle),treeNode.Radius * Mathf.Sin(childAngle));
+            Vector2 LineEnd = parentTransform.anchoredPosition + new Vector2(parentNode.Radius * Mathf.Cos(childAngle),parentNode.Radius * Mathf.Sin(childAngle));
+
+            DrawLine(lineStart, lineEnd, Canvas, treeNode.Name, parentNode.Name);
         }
 
+        // Starting point for children angles. Allows us to "walk" out from starting point with every increment of i
+        // 
+        float childStartAngle = childAngle - (angleStep * (Mathf.Ceil(n / 2)));
+
+        // Draw children
         for (int i = 0; i < n; i++)
         {
             ResearchNode child = children[i];
@@ -60,7 +68,7 @@ public class LayoutEngine : MonoBehaviour
                 // TODO: Make the children spawn away from the parent node in a 90 degree arc
             }
 
-            float angle = i * angleStep + childAngle;
+            float angle = i * angleStep + childStartAngle;
             float childX = center.x + adjustedRadius * Mathf.Cos(angle);
             float childY = center.y + adjustedRadius * Mathf.Sin(angle);
             Vector2 childCenter = new (childX, childY);
