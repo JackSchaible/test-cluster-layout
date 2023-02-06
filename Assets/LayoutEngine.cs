@@ -53,7 +53,7 @@ public class LayoutEngine : MonoBehaviour
             DrawLine(lineStart, lineEnd, Canvas, treeNode.Name, parentNode.Name);
         } else {
             // Makes the root node spawn children in all directions
-            angleStep = 2 * Pi
+            angleStep = 2 * Pi;
         }
 
         // Starting point for children angles. Allows us to "walk" out from starting point with every increment of i
