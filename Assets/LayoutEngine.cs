@@ -48,9 +48,12 @@ public class LayoutEngine : MonoBehaviour
 
             // Moved these to their own lines to make it easier to read
             Vector2 lineStart = rectTransform.anchoredPosition + new Vector2(treeNode.Radius * Mathf.Cos(childAngle),treeNode.Radius * Mathf.Sin(childAngle));
-            Vector2 LineEnd = parentTransform.anchoredPosition + new Vector2(parentNode.Radius * Mathf.Cos(childAngle),parentNode.Radius * Mathf.Sin(childAngle));
+            Vector2 lineEnd = parentTransform.anchoredPosition + new Vector2(parentNode.Radius * Mathf.Cos(childAngle),parentNode.Radius * Mathf.Sin(childAngle));
 
             DrawLine(lineStart, lineEnd, Canvas, treeNode.Name, parentNode.Name);
+        } else {
+            // Makes the root node spawn children in all directions
+            angleStep = 2 * Pi
         }
 
         // Starting point for children angles. Allows us to "walk" out from starting point with every increment of i
