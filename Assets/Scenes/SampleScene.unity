@@ -173,11 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe825431e4836240a72a7149c3bf582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 1322727385}
-  Cluster: {fileID: 11400000, guid: f1214c6d1f6b0d942b4e348ccec0456a, type: 2}
-  Children: []
-  Position: {x: -131.25003, y: 487.13928}
-  Radius: 30
 --- !u!1 &204825515
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,8 +233,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Biology
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -328,7 +323,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -400,11 +395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe825431e4836240a72a7149c3bf582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 204825517}
-  Cluster: {fileID: 11400000, guid: 28efd4cf4d7a2c44b897bb2a0311e43a, type: 2}
-  Children: []
-  Position: {x: -74.999985, y: -129.90382}
-  Radius: 30
 --- !u!1 &405274292
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,8 +531,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Mechanics
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -631,7 +621,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -779,14 +769,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe825431e4836240a72a7149c3bf582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 1237633440}
-  Cluster: {fileID: 11400000, guid: 08f7d8781d802f44a89009b6b8097a84, type: 2}
-  Children:
-  - {fileID: 11400000, guid: 9209f6ae8035cb544b53e9ed1981047c, type: 2}
-  - {fileID: 11400000, guid: f1214c6d1f6b0d942b4e348ccec0456a, type: 2}
-  - {fileID: 11400000, guid: 5df653c618e7dc546a956e98aea9bca3, type: 2}
-  Position: {x: 150, y: 0}
-  Radius: 30
 --- !u!1 &812005636
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,11 +819,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe825431e4836240a72a7149c3bf582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 1027897775}
-  Cluster: {fileID: 11400000, guid: f1214c6d1f6b0d942b4e348ccec0456a, type: 2}
-  Children: []
-  Position: {x: -131.25, y: 162.37975}
-  Radius: 30
 --- !u!1 &875504279
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,11 +869,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe825431e4836240a72a7149c3bf582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 1651738522}
-  Cluster: {fileID: 11400000, guid: f1214c6d1f6b0d942b4e348ccec0456a, type: 2}
-  Children: []
-  Position: {x: 149.99997, y: 324.75955}
-  Radius: 30
 --- !u!1 &937180949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,8 +1041,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Mech Research 2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1159,7 +1131,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1231,11 +1203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe825431e4836240a72a7149c3bf582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 1683033433}
-  Cluster: {fileID: 11400000, guid: 9209f6ae8035cb544b53e9ed1981047c, type: 2}
-  Children: []
-  Position: {x: 525, y: 0}
-  Radius: 30
 --- !u!1 &1237633438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,8 +1263,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Physics
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1386,7 +1353,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1468,8 +1435,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Math
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1558,7 +1525,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1630,11 +1597,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe825431e4836240a72a7149c3bf582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 1545256706}
-  Cluster: {fileID: 11400000, guid: 08f7d8781d802f44a89009b6b8097a84, type: 2}
-  Children: []
-  Position: {x: 112.50001, y: -64.95191}
-  Radius: 30
 --- !u!1 &1322727383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,8 +1657,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Mech Research 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1785,7 +1747,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1935,8 +1897,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Phys Research A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2025,7 +1987,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2191,8 +2153,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Mech Research 3
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2281,7 +2243,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2363,8 +2325,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Thermodynamics
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2453,7 +2415,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2525,14 +2487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe825431e4836240a72a7149c3bf582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 471446373}
-  Cluster: {fileID: 11400000, guid: f1214c6d1f6b0d942b4e348ccec0456a, type: 2}
-  Children:
-  - {fileID: 11400000, guid: 0e68eedf7fde8bb46a12e6e9909fb1fc, type: 2}
-  - {fileID: 11400000, guid: 4b3375986d3cca54683b30b8030fbedd, type: 2}
-  - {fileID: 11400000, guid: bd5306905774a174ab48ac27fa3c5cbb, type: 2}
-  Position: {x: -37.500023, y: 324.75952}
-  Radius: 30
 --- !u!1 &1810408383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,8 +2547,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Chemistry
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2683,7 +2637,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 2180264, guid: 38f6dd138cfad024c8aa179204283295, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2755,14 +2709,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe825431e4836240a72a7149c3bf582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 1257931500}
-  Cluster: {fileID: 11400000, guid: 2035d064112c0064bb2395e345689526, type: 2}
-  Children:
-  - {fileID: 11400000, guid: 08f7d8781d802f44a89009b6b8097a84, type: 2}
-  - {fileID: 11400000, guid: 72f501f6c82c1dd4eb5eae2dd245e160, type: 2}
-  - {fileID: 11400000, guid: 28efd4cf4d7a2c44b897bb2a0311e43a, type: 2}
-  Position: {x: 0, y: 0}
-  Radius: 30
 --- !u!1 &1896765979
 GameObject:
   m_ObjectHideFlags: 0
@@ -2789,14 +2735,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1896765979}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2c8130b9dfee9645bf7aeb4ae168c11, type: 3}
+  m_Script: {fileID: 11500000, guid: 728daa8721d25d84a8b15114211f4125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Root: {fileID: 11400000, guid: 2035d064112c0064bb2395e345689526, type: 2}
-  Spacing: 30
-  ClusterScale: 5
-  TreeNodePrefab: {fileID: 222732603051245823, guid: 8ebf5e41de12e004d8208559d75fce48, type: 3}
-  Canvas: {fileID: 937180950}
+  Root: {fileID: 0}
+  Spacing: 1
+  ClusterScale: 2
+  TreeNodePrefab: {fileID: 0}
+  Canvas: {fileID: 0}
 --- !u!4 &1896765981
 Transform:
   m_ObjectHideFlags: 0
@@ -2863,8 +2809,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe825431e4836240a72a7149c3bf582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 1810408385}
-  Cluster: {fileID: 11400000, guid: 72f501f6c82c1dd4eb5eae2dd245e160, type: 2}
-  Children: []
-  Position: {x: -75.00001, y: 129.90381}
-  Radius: 30
