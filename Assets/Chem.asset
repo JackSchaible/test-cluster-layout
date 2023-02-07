@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Chemistry
   Cluster: {fileID: 11400000}
-  Children: []
+  Children:
+  - {fileID: 11400000, guid: cb2edaec6397ec544a3c66847d73759d, type: 2}
+  - {fileID: 11400000, guid: 905901fe25cf0124a80e4b9099fca769, type: 2}

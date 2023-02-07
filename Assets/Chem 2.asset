@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 984080747f015444aa1dd1ef0270f552, type: 3}
   m_Name: Chem 2
   m_EditorClassIdentifier: 
-  Name: Chemistry
-  Cluster: {fileID: 11400000}
+  Name: Chem Research 2
+  Cluster: {fileID: 11400000, guid: 72f501f6c82c1dd4eb5eae2dd245e160, type: 2}
   Children: []
