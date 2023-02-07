@@ -18,6 +18,14 @@ public class LayoutEngineEditor : Editor
         GUILayout.Space(5);
 
         LayoutEngine layoutEngine = (LayoutEngine)target;
+        if (GUILayout.Button("Clean"))
+        {
+            layoutEngine.Clean();
+            layoutEngine.Clean();
+            layoutEngine.Clean();
+            layoutEngine.Clean();
+            layoutEngine.Clean();
+        }
         if (GUILayout.Button("Generate"))
         {
             layoutEngine.Generate();
