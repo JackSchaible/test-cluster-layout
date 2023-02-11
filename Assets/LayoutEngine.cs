@@ -47,8 +47,11 @@ public class LayoutEngine : MonoBehaviour
             RectTransform parentTransform = parentNode.GetComponent<RectTransform>();
 
             // Moved these to their own lines to make it easier to read
-            Vector2 lineStart = rectTransform.anchoredPosition + new Vector2(treeNode.Radius * Mathf.Cos(childAngle),treeNode.Radius * Mathf.Sin(childAngle));
-            Vector2 lineEnd = parentTransform.anchoredPosition + new Vector2(parentNode.Radius * Mathf.Cos(childAngle),parentNode.Radius * Mathf.Sin(childAngle));
+            //Vector2 lineStart = rectTransform.anchoredPosition + new Vector2(treeNode.Radius * Mathf.Cos(childAngle),treeNode.Radius * Mathf.Sin(childAngle));
+            //Vector2 lineEnd = parentTransform.anchoredPosition + new Vector2(parentNode.Radius * Mathf.Cos(childAngle),parentNode.Radius * Mathf.Sin(childAngle));
+            Vector2 lineStart = treeNode.Position + new Vector2(treeNode.Radius * Mathf.Cos(childAngle),treeNode.Radius * Mathf.Sin(childAngle));
+            Vector2 lineEnd = parentNode.Position + new Vector2(parentNode.Radius * Mathf.Cos(childAngle),parentNode.Radius * Mathf.Sin(childAngle));
+
 
             DrawLine(lineStart, lineEnd, Canvas, treeNode.Name, parentNode.Name);
         } else {
