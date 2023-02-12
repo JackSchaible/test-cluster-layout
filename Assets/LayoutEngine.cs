@@ -59,25 +59,18 @@ public class LayoutEngine : MonoBehaviour
 
         if (parentNode != null)
         {
-            // Padding value calculations
-            float Padding = Spacing * 1.25f;
-
             childAngle = Mathf.Atan2(center.y - parentNode.Position.y, center.x - parentNode.Position.x);
             RectTransform parentTransform = parentNode.GetComponent<RectTransform>();
 
-            float EndPadding = (parentTransform.anchoredPosition - center).magnitude + (Padding * 1.2f) ;
-            float EndClusterPadding = (parentTransform.anchoredPosition - center).magnitude;
-
-            float startPadding = parentTransform.rect.size.x / 2;
-
             // Moved these to their own lines to make it easier to read
-            Vector2 parentPos = parentTransform.anchoredPosition;
-            float endPadding = treeNode.Cluster == parentNode.Cluster ? EndClusterPadding : EndPadding;
+            float lineLength = (treeNode.Cluster == parentNode.Cluster ? radius : radius * 2) * ClusterScale
+                               - BubbleSize;
 
-            Vector2 lineStart = new Vector2(Mathf.Cos(childAngle), Mathf.Sin(childAngle)) * startPadding;
-            Vector2 lineEnd = rectTransform.anchoredPosition; //new (Mathf.Cos(childAngle), Mathf.Sin(childAngle));
+            Vector2 lineStart = treeNode.Radius * new Vector2(Mathf.Cos(childAngle), Mathf.Sin(childAngle));
+            Vector2 lineEnd = new Vector2(Mathf.Cos(childAngle), Mathf.Sin(childAngle)) * lineLength;
             
-            DrawLine(lineStart, lineEnd, parentPos, Canvas, treeNode.Name, parentNode.Name);
+            DrawLine(lineStart, lineEnd, parentTransform.anchoredPosition,
+                Canvas, treeNode.Name, parentNode.Name);
         } else {
             // Makes the root node spawn children in all directions
             angleStep = 2 * Pi / n;
