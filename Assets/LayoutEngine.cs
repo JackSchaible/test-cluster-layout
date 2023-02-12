@@ -60,24 +60,18 @@ public class LayoutEngine : MonoBehaviour
         {
             // Padding value calculations
             float Padding = Spacing * 1.25f;
-            float EndPadding = 0;
-            float EndClusterPadding = 0;
-
 
             childAngle = Mathf.Atan2(center.y - parentNode.Position.y, center.x - parentNode.Position.x);
             RectTransform parentTransform = parentNode.GetComponent<RectTransform>();
 
-            EndPadding = (parentTransform.anchoredPosition - center).magnitude + (Padding * 1.2f) ;
-            EndClusterPadding = (parentTransform.anchoredPosition - center).magnitude;
-            Debug.Log(EndPadding);
+            float EndPadding = (parentTransform.anchoredPosition - center).magnitude + (Padding * 1.2f) ;
+            float EndClusterPadding = (parentTransform.anchoredPosition - center).magnitude;
+
 
             // Moved these to their own lines to make it easier to read
             Vector2 parentPos = parentTransform.anchoredPosition;
             float endPadding = treeNode.Cluster == parentNode.Cluster ? EndClusterPadding : EndPadding;
 
-            //Vector2 lineStart = rectTransform.anchoredPosition + new Vector2(endPadding * Mathf.Cos(childAngle), endPadding * Mathf.Sin(childAngle)) - parentPos;
-            //Vector2 lineEnd = parentPos + new Vector2(Padding * Mathf.Cos(childAngle),Padding * Mathf.Sin(childAngle)) - parentPos;
-            //Vector2 lineStart = rectTransform.anchoredPosition - parentPos + 
             Vector2 lineStart = new Vector2(endPadding * Mathf.Cos(childAngle), endPadding * Mathf.Sin(childAngle));
             Vector2 lineEnd = new Vector2(Padding * Mathf.Cos(childAngle),Padding * Mathf.Sin(childAngle));
             
