@@ -30,5 +30,15 @@ public class LayoutEngineEditor : Editor
         {
             layoutEngine.Generate();
         }
+
+        if (GUILayout.Button("Regenerate"))
+        {
+            layoutEngine.Clean();
+            layoutEngine.Clean();
+            layoutEngine.Clean();
+            layoutEngine.Clean();
+            layoutEngine.Clean();
+            layoutEngine.Generate();
+        }
     }
 }

@@ -8,6 +8,7 @@ public class LayoutEngine : MonoBehaviour
 {
     public ResearchNode Root;
     public float Spacing = 1.0f;
+    public float BubbleSize = 30.0f;
     //public float Padding = 1.2f;
     //public float EndPadding = 1.0f;
     //public float EndClusterPadding = 1.0f;
@@ -42,7 +43,7 @@ public class LayoutEngine : MonoBehaviour
         treeNode.Cluster = node.Cluster;
         treeNode.Children = node.Children;
         treeNode.Name = node.Name;
-        treeNode.Radius = Spacing;
+        treeNode.Radius = BubbleSize;
 
         RectTransform rectTransform = treeNodeObject.GetComponent<RectTransform>();
         rectTransform.anchoredPosition = center;
@@ -67,13 +68,14 @@ public class LayoutEngine : MonoBehaviour
             float EndPadding = (parentTransform.anchoredPosition - center).magnitude + (Padding * 1.2f) ;
             float EndClusterPadding = (parentTransform.anchoredPosition - center).magnitude;
 
+            float startPadding = parentTransform.rect.size.x / 2;
 
             // Moved these to their own lines to make it easier to read
             Vector2 parentPos = parentTransform.anchoredPosition;
             float endPadding = treeNode.Cluster == parentNode.Cluster ? EndClusterPadding : EndPadding;
 
-            Vector2 lineStart = new Vector2(endPadding * Mathf.Cos(childAngle), endPadding * Mathf.Sin(childAngle));
-            Vector2 lineEnd = new Vector2(Padding * Mathf.Cos(childAngle),Padding * Mathf.Sin(childAngle));
+            Vector2 lineStart = new Vector2(Mathf.Cos(childAngle), Mathf.Sin(childAngle)) * startPadding;
+            Vector2 lineEnd = rectTransform.anchoredPosition; //new (Mathf.Cos(childAngle), Mathf.Sin(childAngle));
             
             DrawLine(lineStart, lineEnd, parentPos, Canvas, treeNode.Name, parentNode.Name);
         } else {
@@ -108,11 +110,12 @@ public class LayoutEngine : MonoBehaviour
         }
     }
 
-    private void DrawLine(Vector2 start, Vector2 end,Vector2 parentPos, Canvas canvas, string fromObjectName, string toObjectName)
+    private void DrawLine(Vector2 start, Vector2 end,Vector2 parentPos, Canvas canvas, string toObjectName, string fromObjectName)
     {
         VectorLine line = new ($"Line from {fromObjectName} to {toObjectName}",
             new List<Vector2>(), LineWidth);
         line.SetCanvas(canvas);
+        line.rectTransform.localScale = Vector3.one;
         line.rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
         line.rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
         line.rectTransform.anchoredPosition = parentPos;
