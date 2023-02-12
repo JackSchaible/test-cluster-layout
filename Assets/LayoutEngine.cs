@@ -66,7 +66,7 @@ public class LayoutEngine : MonoBehaviour
         if (nNonClusterChildren > 0 && parentNode != null)
             LayoutNonClusterChildren(nNonClusterChildren, childAngle, nonClusterChildren, node, center, treeNode);
         else if (nNonClusterChildren > 0)
-            LayoutClusterChildren(nNonClusterChildren, childAngle, nonClusterChildren, node, center, treeNode, 0);
+            LayoutClusterChildren(nNonClusterChildren, childAngle, nonClusterChildren, node, center, treeNode, 0, true);
 
         ResearchNode[] clusterChildren = children.Where(c => c.Cluster == node.Cluster).ToArray();
         int nClusterChildren = clusterChildren.Length;
@@ -88,12 +88,16 @@ public class LayoutEngine : MonoBehaviour
     }
 
     private void LayoutClusterChildren(int nChildren, float childAngle, ResearchNode[] children,
-        ResearchNode node, Vector3 center, Node treeNode, int nNonClusterChildren)
+        ResearchNode node, Vector3 center, Node treeNode, int nNonClusterChildren, bool isFirstSpawn = false)
     {
         // Starting point for children angles. Allows us to "walk" out from starting point with every increment of i
         // Updated this to restrict the angle children spawn in to 90 degrees
         float angleStep = 2 * Pi / (nChildren);
         float childStartAngle = childAngle - angleStep * nChildren + (nNonClusterChildren * angleStep / 2) + 2f;
+
+        // Make bio spawn downwards
+        if (isFirstSpawn)
+            childStartAngle = 30 * Mathf.Deg2Rad;
 
         DrawChildren(nChildren, children, node, center, treeNode, childStartAngle, angleStep);
     }
