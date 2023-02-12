@@ -8,14 +8,15 @@ public class LayoutEngine : MonoBehaviour
 {
     public ResearchNode Root;
     public float Spacing = 1.0f;
-    public float Padding = 1.2f;
-    public float EndPadding = 1.0f;
-    public float EndClusterPadding = 1.0f;
+    //public float Padding = 1.2f;
+    //public float EndPadding = 1.0f;
+    //public float EndClusterPadding = 1.0f;
     public float ClusterScale = 2.0f;
     public float LineWidth = 2.0f;
     private const float Pi = Mathf.PI;
     public GameObject TreeNodePrefab;
     public Canvas Canvas;
+
     
 
     // Start is called before the first frame update
@@ -57,14 +58,28 @@ public class LayoutEngine : MonoBehaviour
 
         if (parentNode != null)
         {
+            // Padding value calculations
+            float Padding = Spacing * 1.25f;
+            float EndPadding = 0;
+            float EndClusterPadding = 0;
+
+
             childAngle = Mathf.Atan2(center.y - parentNode.Position.y, center.x - parentNode.Position.x);
             RectTransform parentTransform = parentNode.GetComponent<RectTransform>();
+
+            EndPadding = (parentTransform.anchoredPosition - center).magnitude + (Padding * 1.2f) ;
+            EndClusterPadding = (parentTransform.anchoredPosition - center).magnitude;
+            Debug.Log(EndPadding);
 
             // Moved these to their own lines to make it easier to read
             Vector2 parentPos = parentTransform.anchoredPosition;
             float endPadding = treeNode.Cluster == parentNode.Cluster ? EndClusterPadding : EndPadding;
-            Vector2 lineStart = rectTransform.anchoredPosition + new Vector2(endPadding * Mathf.Cos(childAngle), endPadding * Mathf.Sin(childAngle)) - parentPos;
-            Vector2 lineEnd = parentTransform.anchoredPosition + new Vector2(Padding * Mathf.Cos(childAngle),Padding * Mathf.Sin(childAngle)) - parentPos;
+
+            //Vector2 lineStart = rectTransform.anchoredPosition + new Vector2(endPadding * Mathf.Cos(childAngle), endPadding * Mathf.Sin(childAngle)) - parentPos;
+            //Vector2 lineEnd = parentPos + new Vector2(Padding * Mathf.Cos(childAngle),Padding * Mathf.Sin(childAngle)) - parentPos;
+            //Vector2 lineStart = rectTransform.anchoredPosition - parentPos + 
+            Vector2 lineStart = new Vector2(endPadding * Mathf.Cos(childAngle), endPadding * Mathf.Sin(childAngle));
+            Vector2 lineEnd = new Vector2(Padding * Mathf.Cos(childAngle),Padding * Mathf.Sin(childAngle));
             
             DrawLine(lineStart, lineEnd, parentPos, Canvas, treeNode.Name, parentNode.Name);
         } else {
@@ -83,6 +98,10 @@ public class LayoutEngine : MonoBehaviour
             float adjustedRadius = radius;
             if (child.Cluster != node.Cluster)
             {
+                adjustedRadius *= 2 * ClusterScale;
+            }
+            else
+            {
                 adjustedRadius *= ClusterScale;
             }
 
@@ -91,7 +110,7 @@ public class LayoutEngine : MonoBehaviour
             float childY = center.y + adjustedRadius * Mathf.Sin(angle);
             Vector2 childCenter = new (childX, childY);
 
-            Layout(child, childCenter, adjustedRadius / 2, treeNode);
+            Layout(child, childCenter, radius, treeNode);
         }
     }
 
